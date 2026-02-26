@@ -1,38 +1,104 @@
-.App {
-  text-align: center;
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+/* Full app background for ALL pages */
+.app {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  background: url("./assets/background.jpg") center/cover no-repeat fixed;
+  position: relative;
+}
+
+/* Dark overlay so text is readable */
+.app::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 0;
+}
+
+/* Keep everything above overlay */
+.app > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Navbar over background */
+.topbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  padding: 18px 40px;
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  z-index: 1000;
+
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+.brand {
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  background: linear-gradient(90deg,  #286745,#ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.nav {
+  display: flex;
+  gap: 32px;
 }
 
-.App-link {
-  color: #61dafb;
+.navlink {
+  position: relative;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  color: rgba(255,255,255,0.8);
+  transition: color 0.3s ease;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navlink:hover {
+  color: #fff;
+}
+
+.navlink::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background: #fff;
+  transition: width 0.3s ease;
+}
+
+.navlink:hover::after {
+  width: 100%;
+}
+
+.navlink.active::after {
+  width: 100%;
+}
+/* Main content full width + below navbar */
+.main {
+  flex: 1;
+  width: 100%;
+  padding-top: 90px;   /* space for fixed navbar */
+}
+
+/* Footer transparent */
+.footer {
+  padding: 16px 20px;
+  color: rgba(255,255,255,0.8);
+  background: transparent;
+  border-top: 1px solid rgba(255,255,255,0.15);
 }

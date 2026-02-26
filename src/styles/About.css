@@ -1,0 +1,123 @@
+/* ===== About Page (Glass + Stats Cards) ===== */
+
+.about {
+  min-height: 100vh;
+  padding: 120px 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.glass {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 22px;
+  text-align: center;
+  padding: 28px 30px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.35);
+}
+ 
+.about__title {
+  margin: 0 0 12px;
+  font-size: 44px;
+  color: #5ed8ac;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+}
+
+.about__title2 {
+  margin: 0 0 12px;
+  font-size: 28px;
+  font-weight: 800;
+  color: #5ed8ac;
+  letter-spacing: 0.2px;
+}
+
+.about__text {
+  margin: 0 auto;
+  max-width: 750px;
+  font-size: 18px;
+  line-height: 1.85;
+  color: rgba(255, 255, 255, 0.82);
+}
+.about__section {
+  width: 100%;
+  max-width: 1100px;
+  margin: 26px auto 34px;   /* space above + below the whole section */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;                /* space between title and cards */
+}
+/* Section title */
+.about__sectionTitle {
+  margin: 0;                /* IMPORTANT: no extra random margins */
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  color: #5ed8ac;
+}
+
+/* ===== Skills Stats Cards (like image #2) ===== */
+
+.stats {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 14px;
+
+  margin: 0;                /* IMPORTANT */
+  padding: 0;               /* IMPORTANT */
+}
+
+.stat {
+  background: rgba(68, 204, 192, 0.18);  /* subtle purple tech vibe */
+  border: 2px solid rgba(255, 255, 255, 0.10);
+  border-radius: 18px;
+  padding: 16px 14px;
+  backdrop-filter: blur(10px);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.stat:hover {
+  transform: translateY(-3px);
+  border-color: rgba(63, 207, 159, 0.35);
+}
+
+.stat__value {
+  font-size: 18px;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 6px;
+}
+
+.stat__label {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.3;
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+  .stats {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .about {
+    padding: 105px 7%;
+  }
+
+  .about__title {
+    font-size: 34px;
+  }
+
+  .about__text {
+    font-size: 16px;
+  }
+
+  .stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

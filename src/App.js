@@ -1,25 +1,45 @@
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route, NavLink } from "react-router-dom";
+import Home from "./Components/home";
+import About from "./Components/About";
+import Activity from "./Components/Activity";
+import Contact from "./Components/Contact";
+import "./App.css";
 
-function App() {
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div className="app">
+      <header className="topbar">
+        <div className="brand">My Portfolio</div>
+
+        <nav className="nav">
+          <NavLink to="/" className="navlink" end>
+            Home
+          </NavLink>
+          <NavLink to="/about" className="navlink">
+            About
+          </NavLink>
+          <NavLink to="/activity" className="navlink">
+            Activities
+          </NavLink>
+          <NavLink to="/contact" className="navlink">
+            Contact
+          </NavLink>
+</nav>
       </header>
+
+      <main className="main" >
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/activity" element={<Activity />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </main>
+
+      <footer className="footer">
+        <small>© {new Date().getFullYear()} Your Name</small>
+      </footer>
     </div>
   );
 }
-
-export default App;
