@@ -1,44 +1,72 @@
 import "../styles/Activity.css";
 
-const activities = [
-  {
-    title: "Portfolio Website (This Project)",
-    bullets: [
-      "Created multiple pages using React Router",
-      "Practicing component structure and CSS styling",
-      "Will add more projects over time",
-    ],
-  },
-  {
-    title: "University / Personal Learning",
-    bullets: [
-      "Currently learning React and web basics",
-      "Planning to build 2–3 small projects next",
-    ],
-  },
-];
-
-export default function Activity() {
+export default function Activities() {
   return (
-    <div className="activity">
-      <h1>Activities / Leadership</h1>
-      <p className="muted">
-        I’m currently building my first projects. I will keep updating this
-        section as I take on more roles and work.
-      </p>
+    <div className="activities">
 
-      <div className="grid">
-        {activities.map((a) => (
-          <div key={a.title} className="card">
-            <h3>{a.title}</h3>
-            <ul>
-              {a.bullets.map((b) => (
-                <li key={b}>{b}</li>
-              ))}
-            </ul>
-          </div>
-        ))}
+      <div className="activities__header">
+        <h3 className="activities__greeting">My Work </h3>
+        <h2 className="activities__title">
+          Projects & <span>Leadership</span>
+        </h2>
       </div>
+
+      <div className="activities__content">
+
+        {/* Hospital Management System */}
+        <div className="activity__card featured">
+          <h3>🏥 Hospital Management System</h3>
+          <p>
+            A full-stack web application to manage hospital operations including
+            patient registration, doctor scheduling, appointment booking and
+            admin management.
+          </p>
+
+          <ul>
+            <li>Full-stack development</li>
+            <li>Authentication system</li>
+            <li>Admin & user dashboards</li>
+            <li>Database integration</li>
+          </ul>
+
+          <div className="activity__buttons">
+            <a href="#" className="btn">GitHub</a>
+            <a href="#" className="btn btn--ghost">Live Demo</a>
+          </div>
+        </div>
+
+        {/* Portfolio */}
+        <div className="activity__card">
+          <h3>🌐 Portfolio Website</h3>
+          <p>
+            A responsive personal portfolio built with React to showcase my
+            projects, skills and achievements.
+          </p>
+
+          <ul>
+            <li>Modern dark UI</li>
+            <li>Responsive layout</li>
+            <li>Clean component structure</li>
+          </ul>
+        </div>
+
+        {/* Leadership */}
+        <div className="activity__card">
+          <h3>👩‍💼 Vice President – Moratuwa Pilot Exam</h3>
+          <p>
+            Assisted in organizing academic events, coordinating teams and
+            managing responsibilities effectively.
+          </p>
+
+          <ul>
+            <li>Leadership & coordination</li>
+            <li>Team communication</li>
+            <li>Event planning</li>
+          </ul>
+        </div>
+
+      </div>
+
     </div>
   );
 }
