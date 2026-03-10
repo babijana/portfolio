@@ -3,18 +3,20 @@ import "../styles/Home.css";
 export default function Home() {
   return (
     <div className="home">
-      
 
       <div className="hero">
+
         <div className="hero__image avatar-blob">
-          <img src="/photo.jpg" alt="Profile" />
+          <img src="/maya-ali1.jpg" alt="Profile" />
         </div>
 
         <div className="hero__content">
           <h3 className="hero__greeting">Hello! 👋</h3>
+
           <h2 className="hero__name">
             I Am <span>Babijana Jegarashan</span>
           </h2>
+
           <p>
             I’m a Computer Science undergraduate currently learning React and
             building my first portfolio project. I enjoy solving problems and
@@ -26,12 +28,13 @@ export default function Home() {
             meaningful real-world applications.
           </p>
         </div>
-      </div> 
+
+      </div>
 
       <div className="home__links">
         <a
           className="btn"
-          href="https://github.com/"
+          href="https://github.com/babijana/"
           target="_blank"
           rel="noreferrer"
         >
@@ -47,6 +50,7 @@ export default function Home() {
           LinkedIn
         </a>
       </div>
+
     </div>
   );
 }
