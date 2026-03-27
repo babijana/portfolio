@@ -18,14 +18,15 @@ export default function Home() {
           </h2>
 
           <p>
-            I’m a Computer Science undergraduate currently learning React and
-            building my first portfolio project. I enjoy solving problems and
-            improving my skills step by step.
+            A Computer Science undergraduate with experience in building full-stack web applications. 
+            I enjoy designing efficient systems and creating user-friendly digital experiences.
+
+            
           </p>
 
           <p>
-            My goal is to become a strong full-stack developer and work on
-            meaningful real-world applications.
+            I’m passionate about solving real-world problems through clean and scalable solutions,
+             and I’m working towards becoming a skilled full-stack developer.
           </p>
         </div>
 
