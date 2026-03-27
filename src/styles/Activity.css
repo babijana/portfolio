@@ -13,7 +13,7 @@
   font-size: 16px;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: #5ed8ac;
+  color: hwb(197 58% 4%);
   opacity: 0.7;
 }
 
@@ -24,7 +24,7 @@
 }
 
 .activities__title span {
-  color: #3fcf9f;
+  color: hwb(197 58% 4%);
   text-shadow: 0 0 8px rgba(63, 207, 159, 0.3);
 }
 

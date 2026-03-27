@@ -3,170 +3,96 @@
   min-height: 100vh;
 }
 
+/* HEADER */
 .contact__header {
   text-align: center;
-  margin-bottom: 55px;
+  margin-bottom: 60px;
 }
 
 .contact__greeting {
-  font-size: 16px;
-  letter-spacing: 3px;
+  font-size: 14px;
+  letter-spacing: 2px;
   text-transform: uppercase;
-  color: #5ed8ac;
-  opacity: 0.7;
-  margin-bottom: 10px;
+  color: #f3faf7;
+  text-shadow: 0 0 8px rgba(63, 207, 159, 0.5);
+  opacity: 0.8;
+  margin-bottom: 8px;
 }
 
 .contact__title {
-  font-size: 42px;
-  color: #fff;
+  font-size: 36px;
+  color: hwb(197 58% 4%);
+  text-shadow: 0 0 8px rgba(34, 211, 238, 0.5);
   margin: 0;
 }
 
 .contact__title span {
-  color: #3fcf9f;
-  text-shadow: 0 0 8px rgba(63, 207, 159, 0.3);
+  color: #ffffff;
 }
 
 .contact__subtitle {
-  margin: 12px auto 0;
-  max-width: 720px;
-  color: rgba(255, 255, 255, 0.75);
-  line-height: 1.7;
+  margin: 10px auto 0;
+  max-width: 520px;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.6;
+  font-size: 15px;
 }
 
+/* GRID (center it instead of split layout) */
 .contact__grid {
-  display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  gap: 22px;
-  align-items: start;
-}
-
-.contact__card {
-  padding: 30px 34px;
-  border-radius: 18px;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  backdrop-filter: blur(10px);
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-}
-
-.contact__card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
-  border-color: rgba(63, 207, 159, 0.25);
-}
-
-.card__title {
-  font-size: 22px;
-  color: #fff;
-  margin-bottom: 18px;
-}
-
-.contact__form {
   display: flex;
-  flex-direction: column;
-  gap: 16px;
+  justify-content: center;
 }
 
-.field label {
-  display: block;
-  font-size: 13px;
-  letter-spacing: 1.6px;
-  text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.7);
-  margin-bottom: 8px;
-}
-
-.field input,
-.field textarea {
+/* CARD (lighter, no heavy effects) */
+.contact__card {
   width: 100%;
-  padding: 12px 14px;
-  border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  background: rgba(0, 0, 0, 0.25);
-  color: rgba(255, 255, 255, 0.9);
-  outline: none;
-  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+  max-width: 620px;
+  padding: 28px 26px;
+  border-radius: 14px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  text-align: center;
+  
 }
 
-.field input:focus,
-.field textarea:focus {
-  border-color: rgba(63, 207, 159, 0.5);
-  box-shadow: 0 0 0 5px rgba(63, 207, 159, 0.12);
-}
-
-.contact__btn {
-  width: fit-content;
-  cursor: pointer;
-}
-
-.contact__btn:disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
-}
-
-.contact__status {
-  margin-top: 6px;
-  font-weight: 600;
-  font-size: 14px;
-}
-
-.contact__status.success {
-  color: #3fcf9f;
-}
-
-.contact__status.error {
-  color: #ff6b6b;
-}
-
+/* INFO ITEMS */
 .contact__info .info__item {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 4px;
   padding: 14px 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  align-items: center;
+  text-align: center;
 }
 
 .info__label {
-  font-size: 12px;
-  letter-spacing: 2px;
+  font-size: 11px;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.65);
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .info__value {
   color: rgba(255, 255, 255, 0.85);
   text-decoration: none;
+  font-size: 15px;
+  
 }
 
 .info__value:hover {
   color: #3fcf9f;
 }
 
+/* NOTE (simplified, no box) */
 .info__note {
   margin-top: 18px;
-  padding: 16px;
-  border-radius: 14px;
-  border: 1px solid rgba(63, 207, 159, 0.22);
-  background: rgba(63, 207, 159, 0.08);
 }
+
 
 .info__note p {
   margin: 0;
-  color: rgba(255, 255, 255, 0.75);
-  line-height: 1.6;
-}
-
-.info__buttons {
-  margin-top: 18px;
-  display: flex;
-  gap: 14px;
-  flex-wrap: wrap;
-}
-
-@media (max-width: 900px) {
-  .contact__grid {
-    grid-template-columns: 1fr;
-  }
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 14px;
 }
